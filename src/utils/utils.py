@@ -5,14 +5,39 @@ def display_list(user_list):
     st.write(user_list)
 
 
+def create_global_vars():
+    """creates all the global variables for the app
+    """
+    if "key_selector" not in st.session_state:
+        st.session_state.key_selector = 0
+    # dict {image_name: label}
+    if "labels" not in st.session_state:
+        st.session_state.labels = {}
+    # list that will hold the different labels
+    if 'user_list' not in st.session_state:
+        st.session_state.user_list = []
+    # index of the image to display
+    if 'index' not in st.session_state:
+        st.session_state.index = 0
+
+    # text input value of the label to add to user_list
+    if 'text_input_value' not in st.session_state:
+        st.session_state.text_input_value = ""
+
+    if "label_selection" not in st.session_state:
+        st.session_state.label_selection = None
+
+    if "step_label_list_construction" not in st.session_state:
+        st.session_state.step_label_list_construction = True
+
+    if "step_labelling" not in st.session_state:
+        st.session_state.step_labelling = False
+
 # new_item = st.text_input("Add an item to the list:", st.session_state.text_input_value)
 # if st.button("Add") and new_item is not None:
 #     st.session_state.user_list = add_new_item(st.session_state.user_list, new_item)
 #     st.session_state.text_input_value = ""
 
-def modify_label(list_images, label):
-    st.session_state.labels[list_images[st.session_state.index].name] =  label
-    st.write(f"You have labelled this image as {st.session_state.labels[list_images[st.session_state.index].name]}")
 
 
 # # Allow users to remove items
