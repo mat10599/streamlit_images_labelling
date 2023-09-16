@@ -10,13 +10,13 @@ The goal of this app is to allow the user to label unlabelled images manually.
 
 ## Installation
 First clone the repository on your computer.
-Then either:
-1. install the required dependencies running `pip install -r requirements.txt` in the terminal or otherwise.
-2. run `streamlit run labelling_app.py --server.port 8080` in your terminal 
+Then open your terminal and either:
+1. install the required dependencies running `pip install -r requirements.txt` (in terminal).
+2. run `streamlit run labelling_app.py --server.port 8080` (in terminal). 
 
 - **or**
-1. run `docker build -t name_of_image . `
-2. run `docker run name_of_image`
+1. run `docker build -t name_of_image . ` (in terminal, required docker to be installed)
+2. run `docker run name_of_image` (in terminal)
 3. type http://0.0.0.0:8502 or http://localhost:8502 in your favourite browser to use the app!
 
 
