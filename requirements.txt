@@ -1,0 +1,4 @@
+streamlit==1.26
+streamlit-tags
+pandas
+streamlit-super-slider==0.1.8

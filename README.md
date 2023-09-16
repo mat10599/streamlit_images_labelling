@@ -5,26 +5,32 @@
 Data labelling app with streamlit.
 
 ## Description
-The goal of this app is to allow the user to label unlabelled images maually.
-To do so, user should be able to upload multiple images, label them in the app, and download the id of the image with its label.
+The goal of this app is to allow the user to label unlabelled images manually.
 
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+First clone the repository on your computer.
+Then either:
+1. install the required dependencies running `pip install -r requirements.txt` in the terminal or otherwise.
+2. run `streamlit run labelling_app.py --server.port 8080` in your terminal 
+
+- **or**
+1. run `docker build -t name_of_image . `
+2. run `docker run name_of_image`
+3. type http://0.0.0.0:8502 or http://localhost:8502 in your favourite browser to use the app!
+
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+The app is meant to be used to label images. 
+User should first upload the different images it wants to label.
+Then, he should state what are the possible labels for the app.Finally, the user can label the different images, review and modify the labels if a mistake was made and download the image names with their labelling.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
 ## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+Future improvements to the app include:
+- possibility to connect to a database and to directly "query" unlabelled images from it instead of manually uploading the images.
+- "force" the images to be resized in a certain box: bigger images will take a bigger place in the app, shifting elements dynamically at the cost of user experience.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-project to keep going. You can also make an explicit request for maintainers.
+## Feedback 
+Any comment/remark on how I could improve code quality or the app is much appreciated!
