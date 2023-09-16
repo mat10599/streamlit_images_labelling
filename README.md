@@ -25,7 +25,7 @@ The app is meant to be used to label images.
 User should first upload the different images it wants to label.
 Then, he should state what are the possible labels for the app.Finally, the user can label the different images, review and modify the labels if a mistake was made and download the image names with their labelling.
 
-[streamlit-labelling_app-2023-09-16-18-09-55.webm](https://github.com/mat10599/streamlit_images_labelling/assets/78880807/299c0a15-aeb4-44b4-a53e-1f375be9965c)
+[short video on how to use the app](https://github.com/mat10599/streamlit_images_labelling/assets/78880807/299c0a15-aeb4-44b4-a53e-1f375be9965c)
 
 ## Roadmap
 Future improvements to the app include:
