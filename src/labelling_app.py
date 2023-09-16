@@ -16,7 +16,8 @@ list_images = st.file_uploader(label="Please upload your images",
 
 # CREATE LABELS LIST
 st.session_state.user_list = st_tags(
-    label="Enter labels", text="Please enter the different possible labels for your images")
+    label="Enter label options",
+    text="Please enter the different possible labels for your images")
 display_list(st.session_state.user_list)
 
 
@@ -26,7 +27,8 @@ if list_images != []:
     st.image(image=list_images[st.session_state.index])
     try:
         st.write(
-            f"You have labelled this image as {st.session_state.labels[list_images[st.session_state.index].name]}")
+            f"You have labelled this image as {st.session_state.labels[list_images[st.session_state.index].name]}"
+        )
     except KeyError:
         st.write("This image has not been labelled yet")
     st.session_state.label_selection = None
@@ -51,8 +53,15 @@ else:
 
 # REVIEW LABELS AND DOWNLOAD RESULTS
 if st.button("Review labelling"):
-    results_df = pd.DataFrame.from_dict(st.session_state.labels, orient='index').reset_index(
+    results_df = pd.DataFrame.from_dict(st.session_state.labels, orient='index'
+                                        ).reset_index(
     ).rename(columns={'index': 'image', 0: 'label'})
     st.write(results_df)
-    st.download_button(label='Download labels', data=results_df.to_csv().encode(
-        "utf-8"), file_name='labels.csv', mime='text/csv')
+    
+    st.download_button(
+        label='Download labels',
+        data=results_df.to_csv().encode(
+            "utf-8"),
+        file_name='labels.csv',
+        mime='text/csv'
+    )
